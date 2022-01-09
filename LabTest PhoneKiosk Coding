@@ -1,0 +1,40 @@
+package LABTEST1;
+
+import java.util.Scanner;
+
+public class PhoneKiosk {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        Scanner sc = new Scanner (System.in);
+        
+        double basicHourlyWages = 5.00;
+        double commission = 0;
+        
+        System.out.print("Enter sales        : RM");
+        double sales = sc.nextDouble();
+        
+        System.out.print("Enter hours worked : ");
+        double hours = sc.nextDouble();
+        System.out.println();
+        
+        if (sales >= 150.00 && sales <= 300.00) {
+			commission = sales * 0.05;
+        }
+		else if (sales >= 301.00 && sales <= 500.00) {
+			commission = sales * 0.1;
+		}
+		else if (sales > 500.00) {
+			commission = sales * 0.15;
+		}
+        
+        double dailyWages = hours * basicHourlyWages;
+        double total = dailyWages + commission;
+        
+        System.out.print("Commission         : " +commission);
+        System.out.println();
+        System.out.print("Daily wages        : " +total);
+        System.out.println();
+	}
+
+}
