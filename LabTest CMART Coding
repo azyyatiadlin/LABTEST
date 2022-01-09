@@ -1,0 +1,69 @@
+package LABTEST1;
+
+import java.util.Scanner;
+
+public class C_Mart {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner (System.in);
+		
+		
+		double item;
+		double quantity1, quantity2, quantity3;
+		double price1, price2, price3; 
+		
+	    
+		System.out.print("Enter the number of items : ");
+		item = sc.nextDouble();
+		
+		System.out.print("Enter price of items : RM");
+		price1 = sc.nextDouble();
+		
+		System.out.print("Enter quantity of first item : ");
+		quantity1 = sc.nextDouble();
+		System.out.println();
+		
+		System.out.print("Enter price of second items : RM");
+		price2 = sc.nextDouble();
+		
+		System.out.print("Enter quantity of second item : ");
+		quantity2 = sc.nextDouble();
+		System.out.println();
+		
+		System.out.print("Enter price of third items : RM");
+		price3 = sc.nextDouble();
+		
+		System.out.print("Enter quantity of third item : ");
+		quantity3 = sc.nextDouble();
+		System.out.println();
+		
+		double totalPrice;
+		
+		totalPrice= (price1*quantity1) + (price2*quantity2) + (price3*quantity3);
+		
+		System.out.print("Total Price        : RM" +totalPrice);
+		System.out.println();
+		
+		double discount = 0; 
+		double totalDiscount = 0;
+		double pay = 0;
+		
+		if (totalPrice > 100) {
+			discount = totalPrice * 0.2;
+		    pay = totalPrice - discount;
+		}
+		else if (totalPrice < 100) {
+			discount = totalPrice * 0.1;
+			pay = totalPrice - discount;
+		}
+	    
+		System.out.print("Discount received  : RM" +discount);
+		System.out.println();
+		System.out.print("Price to be paid   : RM" +pay);
+	    
+		
+	}
+
+}
